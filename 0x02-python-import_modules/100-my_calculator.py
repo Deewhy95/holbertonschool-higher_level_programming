@@ -11,8 +11,9 @@ if __name__ == '__main__':
             if c == index:
                 print('{} {} {} = {}'.format(a, c, b, op[index](a, b)))
                 exit(0)
+        print('Unknown operator. Available operators: +, -, * and /')
+        exit(1)
+
     elif len(argv) == 1:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
-    print('Unknown operator. Available operators: +, -, * and /')
-    exit(1)
