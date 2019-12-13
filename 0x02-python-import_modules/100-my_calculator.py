@@ -14,6 +14,6 @@ if __name__ == '__main__':
         print('Unknown operator. Available operators: +, -, * and /')
         exit(1)
 
-    elif len(argv) == 1:
+    else:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
