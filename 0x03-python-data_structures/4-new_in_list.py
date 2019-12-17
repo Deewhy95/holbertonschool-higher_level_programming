@@ -6,3 +6,5 @@ def new_in_list(my_list, idx, element):
         cp = my_list[:]
         cp[idx] = element
         return cp
+    else:
+        return my_list
