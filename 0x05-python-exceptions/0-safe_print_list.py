@@ -4,6 +4,7 @@ def safe_print_list(my_list=[], x=0):
         try:
             print('{}'.format(index), end='')
         except IndexError:
+            continue
             return index
     print()
     return index
