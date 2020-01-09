@@ -26,8 +26,8 @@ class Square:
         self.__size = value
 
     def my_print(self):
+        if self.__size == 0:
+            print()
         for index in range(self.__size):
             if self.__size != 0:
                 print('#'*self.__size)
-            else:
-                print()
