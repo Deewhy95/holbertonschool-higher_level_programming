@@ -58,6 +58,12 @@ Now use it:
     	      ...
     NameError: name 'Bob' is not defined
 
+    >>> say_my_name("Walter")
+    My name is Walter 
+
+    >>> say_my_name("John")
+    My name is John 
+
     >>> say_my_name(2, Smith)
     Traceback (most recent call last):
     	      ...
