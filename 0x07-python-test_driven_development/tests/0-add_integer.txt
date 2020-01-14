@@ -48,11 +48,23 @@ Now use it:
 
     >>> add_integer(0, 5j)
     Traceback (most recent call last):
+    	      ...
     TypeError: b must be an integer
 
     >>> add_integer(5j)
     Traceback (most recent call last):
+    	      ...
     TypeError: a must be an integer
+
+    >>> add_integer(float('inf'), 3)
+    Traceback (most recent call last):
+    	      ...
+    OverFlowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('nan'), 3)
+    Traceback (most recent call last):
+    	      ...
+    ValueError: cannot convert float NaN to integer
 
     >>> add_integer("School")
     Traceback(most recent call last):
