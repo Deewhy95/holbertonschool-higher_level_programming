@@ -1,11 +1,17 @@
 #!/usr/bin/python3
+"""
+Definition of a Rectangle
+"""
+
+
 class Rectangle:
     """
     define class Rectangle with some attributes: width and height
     """
+
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
