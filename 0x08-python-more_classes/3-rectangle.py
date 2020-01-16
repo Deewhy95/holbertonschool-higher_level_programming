@@ -51,4 +51,5 @@ class Rectangle:
         x = ''
         for i in range(self.__height):
             x += str('#' * self.__width) + '\n'
-        return x[:-1]
+        x = x[:-1]
+        return x
