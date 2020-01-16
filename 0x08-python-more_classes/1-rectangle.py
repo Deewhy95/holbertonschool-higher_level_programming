@@ -2,6 +2,8 @@
 """
 Definition of a class Rectangle
 """
+
+
 class Rectangle:
     """
     define class Rectangle with some attributes: width and height
