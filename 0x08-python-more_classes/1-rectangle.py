@@ -8,10 +8,9 @@ class Rectangle:
     """
     define class Rectangle with some attributes: width and height
     """
-
     def __init__(self, width=0, height=0):
-        self.width = width
         self.height = height
+        self.width = width
 
     @property
     def width(self):
