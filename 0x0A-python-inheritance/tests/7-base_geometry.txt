@@ -28,6 +28,11 @@ Now use it:
     Traceback (most recent call last):
     ValueError: distance must be greater than 0
 
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    	      ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
     >>> bg.integer_validator('Holberton', 'School')
     Traceback (most recent call last):
     ...
@@ -51,8 +56,6 @@ Now use it:
     TypeError: None must be an integer
 
     >>> bg.integer_validator(None, 1)
-
-    >>> bg.integer_validator(1, 1)
 
     >>> bg.integer_validator(1, )
     Traceback (most recent call last):
@@ -115,3 +118,8 @@ Now use it:
     Traceback (most recent call last):
     	      ...
     TypeError: holberton must be an integer
+
+    >>> bg.integer_validator(-1, -2)
+    Traceback (most recent call last):
+    	      ...
+    ValueError: -1 must be greater than 0
