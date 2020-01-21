@@ -138,3 +138,13 @@ Now use it:
     Traceback (most recent call last):
     	      ...
     TypeError: name must be an integer
+
+    >>> bg.integer_validator("name", int('inf'))
+    Traceback (most recent call last):
+    	      ...
+    ValueError: invalid literal for int() with base 10: 'inf'
+
+    >>> bg.integer_validator("name", float('inf'))
+    Traceback (most recent call last):
+    	      ...
+    TypeError: name must be an integer
