@@ -33,15 +33,6 @@ Now use it:
     >>> print(my_list)
     [1, 4, 2, 3, 5, -5, -3]
 
-    >>> my_list.append("holberton")
-    >>> print(my_list)
-    [1, 4, 2, 3, 5, -5, -3, 'holberton']
-
-    >>> my_list.append(holberton)
-    Traceback (most recent call last):
-    	      ...
-    NameError: name 'holberton' is not defined
-
     >>> my_list.append()
     Traceback (most recent call last):
     	      ...
