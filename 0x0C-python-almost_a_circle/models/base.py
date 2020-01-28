@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Base """
 
+
 class Base:
     """
     Class 'Base' will be the “base” of all other classes
