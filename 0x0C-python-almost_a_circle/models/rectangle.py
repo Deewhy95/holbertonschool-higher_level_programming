@@ -79,10 +79,19 @@ class Rectangle(Base):
     def display(self):
         """ Adding the public method that prints
         the Rectangle with the character # """
+        if self.y != 0:
+            print('\n'*self.y, end='')
         for index in range(self.height):
-            print('{}'.format('#'*self.width))
+            print('{}{}'.format(' '*self.x, '#'*self.width))
 
     def __str__(self):
         """ method """
         return("[Rectangle] ({}) {}/{} - {}/{}").format(
             self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        """ Public method that assigns an argument to each attribute """
+        if len(args) == 1:
+            return self.id
+        elif len(args) > 1:
+            return self.width
