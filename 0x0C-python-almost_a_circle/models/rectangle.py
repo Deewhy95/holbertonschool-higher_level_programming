@@ -81,3 +81,8 @@ class Rectangle(Base):
         the Rectangle with the character # """
         for index in range(self.height):
             print('{}'.format('#'*self.width))
+
+    def __str__(self):
+        """ method """
+        return("[Rectangle] ({}) {}/{} - {}/{}").format(
+            self.id, self.x, self.y, self.width, self.height)
