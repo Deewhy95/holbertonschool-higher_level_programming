@@ -31,7 +31,7 @@ class Base:
         with open(cls.__name__+'.json', 'w+') as f:
             list = []
             if list_objs is None or len(list_objs) is 0:
-                f.write(list)
+                pass
             for index in list_objs:
                 list.append(index.to_dictionary())
             dic = cls.to_json_string(list)
