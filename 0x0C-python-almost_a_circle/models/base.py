@@ -30,9 +30,9 @@ class Base:
         """ JSON string representation to a file """
         with open(cls.__name__+'.json', 'w+') as f:
             list = []
-            if len(list_objs) is 0:
+            if list_objs is None and len(list_objs) is 0:
                 f.write(list)
             for index in list_objs:
-                l.append(index.to_dictionary())
+                list.append(index.to_dictionary())
             dic = cls.to_json_string(list)
             f.write(dic)
