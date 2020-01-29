@@ -35,3 +35,11 @@ class Base:
                     list.append(index.to_dictionary())
             dic = cls.to_json_string(list)
             f.write(dic)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ JSON string representing is a list of dictionaries """
+        if json_string is None:
+            return "[]"
+        else:
+            return(json.loads(json_string))
