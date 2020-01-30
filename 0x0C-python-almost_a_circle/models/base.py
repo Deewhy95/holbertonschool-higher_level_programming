@@ -54,3 +54,16 @@ class Base:
             dummy = cls(6)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Adding the class method that returns a list of instances """
+        with open(cls.__name__+'.json', 'r') as f:
+            try:
+                b = []
+                a = Base.from_json_string(f.read())
+                for index in a:
+                    b.append(cls.create(**index))
+                return b
+            except:
+                return []
