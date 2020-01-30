@@ -58,7 +58,31 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """ Adding the class method that returns a list of instances """
-        with open(cls.__name__+'.json', 'r') as f:
+        try:
+            with open(cls.__name__+'.json', 'r') as f:
+                b = []
+                a = Base.from_json_string(f.read())
+                for index in a:
+                    b.append(cls.create(**index))
+                return b
+        except:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """ JSON string representation to a file """
+        with open(cls.__name__+'.csv', 'w+') as f:
+            list = []
+            if list_objs is not None and len(list_objs) is not 0:
+                for index in list_objs:
+                    list.append(index.to_dictionary())
+            dic = cls.to_json_string(list)
+            f.write(dic)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ Adding the class method that returns a list of instances """
+        with open(cls.__name__+'.csv', 'r') as f:
             try:
                 b = []
                 a = Base.from_json_string(f.read())
