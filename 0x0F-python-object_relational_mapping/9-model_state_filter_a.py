@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Prints the first State object from the database hbtn_0e_6_usa
+lists all State objects that contain the letter a from the database hbtn_0e_6_usa
 """
 if __name__ == '__main__':
     from model_state import Base, State
