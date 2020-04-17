@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Fetching URLs with urllib """
+""" Fetching URLs with Requests library """
 import requests
 
 if __name__ == "__main__":
