@@ -13,7 +13,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 1:
         q = sys.argv[1]
     else:
-        q =""
+        q = ""
 
     req = requests.post(url, data={'q': q}).json()
     try:
