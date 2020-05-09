@@ -15,8 +15,9 @@ if __name__ == "__main__":
     else:
         q = ""
 
-    req = requests.post(url, data={'q': q}).json()
     try:
+        req = requests.post(url, data={'q': q}).json()
+
         if len(req) == 0:
             print('No result')
         else:
