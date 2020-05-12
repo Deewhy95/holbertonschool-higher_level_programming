@@ -1,5 +1,5 @@
 #!/usr/bin/node
-/* returns the number of occurrences in a list */
+/* prints the number of arguments already printed and the new argument value */
 let args = 0;
 exports.logMe = function (item) {
   console.log(`${args}: ${item}`);
