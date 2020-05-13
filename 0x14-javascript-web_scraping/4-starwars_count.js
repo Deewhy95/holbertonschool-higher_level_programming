@@ -11,7 +11,7 @@ request(process.argv[2], function (error, response, body) {
     for (const i of movieInfo.results) {
       for (const j of i.characters) {
         if (j.search('18/') > 0) {
-	  aux++;
+          aux++;
         }
       }
     }
